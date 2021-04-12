@@ -6,12 +6,12 @@ import Button from "../../components/button/Button";
 import Loading from "../loading/Loading";
 import { openSource, socialMediaLinks } from "../../portfolio";
 import emoji from "react-easy-emoji";
-
+import { data } from './data'
 
 
 export default function Projects() {
   const GithubRepoCard = lazy(() => import('../../components/githubRepoCard/GithubRepoCard'));
-  const FailedLoading = () => null ;
+  const FailedLoading = () => null;
   const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState([]);
 
@@ -76,22 +76,22 @@ export default function Projects() {
   function setrepoFunction(array) {
     setrepo(array);
   }
-  if (!(typeof repo === 'string' || repo instanceof String)){
-  return (
-    <Suspense fallback={renderLoader()}>
-      <div className="main" id="opensource">
-        <h1 className="project-title">{emoji("Projects 📱")}</h1>
-        <p className="card-subtitle">SOME COOL STUFF THAT I HAVE DONE !</p><br/>
-        <div className="repo-cards-div-main">
-          {repo.map((v, i) => {
-            return <GithubRepoCard repo={v} key={v.node.id} />;
-          })}
+  if (!(typeof repo === 'string' || repo instanceof String)) {
+    return (
+      <Suspense fallback={renderLoader()}>
+        <div className="main" id="opensource">
+          <h1 className="project-title">{emoji("Projects 📱")}</h1>
+          <p className="card-subtitle">SOME COOL STUFF THAT I HAVE DONE !</p><br />
+          <div className="repo-cards-div-main">
+            {data.map((v, i) => {
+              return <GithubRepoCard repo={v} key={v.node.id} />;
+            })}
+          </div>
+          <Button text={"More Projects"} className="project-button" href={socialMediaLinks.github} newTab={true} />
         </div>
-        <Button text={"More Projects"} className="project-button" href={socialMediaLinks.github} newTab={true} />
-      </div>
-    </Suspense>
-  );
-} else{
-    return(<FailedLoading />);
+      </Suspense>
+    );
+  } else {
+    return (<FailedLoading />);
   }
 }
