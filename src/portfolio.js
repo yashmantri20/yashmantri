@@ -9,8 +9,8 @@ const greeting = {
   /* Your Summary And Greeting Section */
   username: "Yash Mantri",
   title: "Hi all, I'm Yash",
-  subTitle: emoji("Web Developer 👨‍💻 | Mobile App Developer 📱 | Content Writing ✍️"),
-  resumeLink: "https://drive.google.com/file/d/1Bt6i4kqZ3xjNmY641eUcBDGxx53I6x0f/view?usp=sharing"
+  subTitle: emoji("Full Stack Developer 👨‍💻 | Content Writing ✍️"),
+  resumeLink: "https://drive.google.com/file/d/1Gn4LkgvUO03skZwvXK16b8rRztIXcDa1/view?usp=sharing"
 };
 
 // Your Social Media Link
@@ -134,11 +134,11 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Web App Developement",  //Insert stack or technology you have experience in
+      Stack: "Frontend Development",  //Insert stack or technology you have experience in
       progressPercentage: "80%"  //Insert relative proficiency in percentage
     },
     {
-      Stack: "Mobile App Development",  //Insert stack or technology you have experience in
+      Stack: "Backend Development",  //Insert stack or technology you have experience in
       progressPercentage: "70%"  //Insert relative proficiency in percentage
     },
     {
@@ -154,7 +154,7 @@ To know how to get github key look at readme.md */
 const openSource = {
   githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
   githubUserName: "yashmantri20", // Change to your github username to view your profile in Contact Section.
-  showGithubProfile :"true" // Set true or false to show Contact profile using Github, defaults to false 
+  showGithubProfile: "true" // Set true or false to show Contact profile using Github, defaults to false 
 };
 
 // Your Achievement Section Include Your Certification Talks and More
@@ -208,15 +208,15 @@ const contactInfo = {
   number: "+91 9601450402",
   email_address: "mantriyash2025@gmail.com"
 };
-  
 
-export { 
-  greeting, 
-  socialMediaLinks, 
-  skillsSection, 
-  techStack, 
-  openSource, 
-  achievementSection, 
-  blogSection, 
-  contactInfo 
+
+export {
+  greeting,
+  socialMediaLinks,
+  skillsSection,
+  techStack,
+  openSource,
+  achievementSection,
+  blogSection,
+  contactInfo
 };
